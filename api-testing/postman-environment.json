@@ -3,6 +3,7 @@
   "values": [
     { "key": "base_url", "value": "https://yahoo-finance166.p.rapidapi.com", "enabled": true },
     { "key": "rapidapi_host", "value": "yahoo-finance166.p.rapidapi.com", "enabled": true },
-    { "key": "rapidapi_key", "value": "PUT_YOUR_RAPIDAPI_KEY_HERE", "enabled": true }
+    { "key": "rapidapi_key", "value": "PUT_YOUR_RAPIDAPI_KEY_HERE", "enabled": true },
+    { "key": "firestore_base_url", "value": "https://firestore.googleapis.com/v1/projects/tracking-tradings-727aa/databases/(default)/documents", "enabled": true }
   ]
 }

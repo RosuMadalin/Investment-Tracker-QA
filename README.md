@@ -25,7 +25,7 @@ investment-tracking-qa/
 │
 ├── screenshots/                # evidence for bug reports (and Jira ticket screenshots, once created)
 │
-├── api-testing/                # Postman collection, if/where the app exposes testable endpoints
+├── api-testing/                # Postman collection: RapidAPI (third-party) + Firestore REST (the app's own backend)
 │
 └── test-summary/               # final report: totals, pass/fail rate, key findings, release recommendation
 ```
@@ -39,7 +39,7 @@ investment-tracking-qa/
 | Test Execution | ✅ Done — 14 PASS / 1 FAIL |
 | Bug Reports | ✅ 1 filed (BUG-001) |
 | Regression Testing | ⬜ Pending (after BUG-001 is fixed) |
-| API Testing | ✅ Done — Postman collection, Environment file, 11/11 assertions passed via Newman CLI |
+| API Testing | ✅ Done — Postman collection (RapidAPI + Firestore CRUD), Environment file, 20/20 assertions passed via Newman CLI |
 | Test Summary Report | ✅ Done |
 
 ## Results at a glance

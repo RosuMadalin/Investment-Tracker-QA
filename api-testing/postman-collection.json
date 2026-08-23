@@ -5,9 +5,26 @@
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
-    { "key": "base_url", "value": "https://yahoo-finance166.p.rapidapi.com" },
-    { "key": "rapidapi_key", "value": "PUT_YOUR_RAPIDAPI_KEY_HERE" },
-    { "key": "rapidapi_host", "value": "yahoo-finance166.p.rapidapi.com" }
+    {
+      "key": "base_url",
+      "value": "https://yahoo-finance166.p.rapidapi.com"
+    },
+    {
+      "key": "rapidapi_key",
+      "value": "PUT_YOUR_RAPIDAPI_KEY_HERE"
+    },
+    {
+      "key": "rapidapi_host",
+      "value": "yahoo-finance166.p.rapidapi.com"
+    },
+    {
+      "key": "firestore_base_url",
+      "value": "https://firestore.googleapis.com/v1/projects/tracking-tradings-727aa/databases/(default)/documents"
+    },
+    {
+      "key": "firestore_created_id",
+      "value": ""
+    }
   ],
   "item": [
     {
@@ -18,16 +35,34 @@
           "request": {
             "method": "GET",
             "header": [
-              { "key": "x-rapidapi-key", "value": "{{rapidapi_key}}" },
-              { "key": "x-rapidapi-host", "value": "{{rapidapi_host}}" }
+              {
+                "key": "x-rapidapi-key",
+                "value": "{{rapidapi_key}}"
+              },
+              {
+                "key": "x-rapidapi-host",
+                "value": "{{rapidapi_host}}"
+              }
             ],
             "url": {
               "raw": "{{base_url}}/api/stock/get-price?region=US&symbol=AAPL",
-              "host": ["{{base_url}}"],
-              "path": ["api", "stock", "get-price"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "stock",
+                "get-price"
+              ],
               "query": [
-                { "key": "region", "value": "US" },
-                { "key": "symbol", "value": "AAPL" }
+                {
+                  "key": "region",
+                  "value": "US"
+                },
+                {
+                  "key": "symbol",
+                  "value": "AAPL"
+                }
               ]
             }
           },
@@ -51,16 +86,34 @@
           "request": {
             "method": "GET",
             "header": [
-              { "key": "x-rapidapi-key", "value": "{{rapidapi_key}}" },
-              { "key": "x-rapidapi-host", "value": "{{rapidapi_host}}" }
+              {
+                "key": "x-rapidapi-key",
+                "value": "{{rapidapi_key}}"
+              },
+              {
+                "key": "x-rapidapi-host",
+                "value": "{{rapidapi_host}}"
+              }
             ],
             "url": {
               "raw": "{{base_url}}/api/stock/get-price?region=US&symbol=ZZZZZ",
-              "host": ["{{base_url}}"],
-              "path": ["api", "stock", "get-price"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "stock",
+                "get-price"
+              ],
               "query": [
-                { "key": "region", "value": "US" },
-                { "key": "symbol", "value": "ZZZZZ" }
+                {
+                  "key": "region",
+                  "value": "US"
+                },
+                {
+                  "key": "symbol",
+                  "value": "ZZZZZ"
+                }
               ]
             }
           },
@@ -85,15 +138,30 @@
           "request": {
             "method": "GET",
             "header": [
-              { "key": "x-rapidapi-key", "value": "{{rapidapi_key}}" },
-              { "key": "x-rapidapi-host", "value": "{{rapidapi_host}}" }
+              {
+                "key": "x-rapidapi-key",
+                "value": "{{rapidapi_key}}"
+              },
+              {
+                "key": "x-rapidapi-host",
+                "value": "{{rapidapi_host}}"
+              }
             ],
             "url": {
               "raw": "{{base_url}}/api/stock/get-price?region=US",
-              "host": ["{{base_url}}"],
-              "path": ["api", "stock", "get-price"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "stock",
+                "get-price"
+              ],
               "query": [
-                { "key": "region", "value": "US" }
+                {
+                  "key": "region",
+                  "value": "US"
+                }
               ]
             }
           },
@@ -122,18 +190,42 @@
           "request": {
             "method": "GET",
             "header": [
-              { "key": "x-rapidapi-key", "value": "{{rapidapi_key}}" },
-              { "key": "x-rapidapi-host", "value": "{{rapidapi_host}}" }
+              {
+                "key": "x-rapidapi-key",
+                "value": "{{rapidapi_key}}"
+              },
+              {
+                "key": "x-rapidapi-host",
+                "value": "{{rapidapi_host}}"
+              }
             ],
             "url": {
               "raw": "{{base_url}}/api/stock/get-chart?region=US&range=1mo&symbol=AAPL&interval=5m",
-              "host": ["{{base_url}}"],
-              "path": ["api", "stock", "get-chart"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "stock",
+                "get-chart"
+              ],
               "query": [
-                { "key": "region", "value": "US" },
-                { "key": "range", "value": "1mo" },
-                { "key": "symbol", "value": "AAPL" },
-                { "key": "interval", "value": "5m" }
+                {
+                  "key": "region",
+                  "value": "US"
+                },
+                {
+                  "key": "range",
+                  "value": "1mo"
+                },
+                {
+                  "key": "symbol",
+                  "value": "AAPL"
+                },
+                {
+                  "key": "interval",
+                  "value": "5m"
+                }
               ]
             }
           },
@@ -157,18 +249,42 @@
           "request": {
             "method": "GET",
             "header": [
-              { "key": "x-rapidapi-key", "value": "{{rapidapi_key}}" },
-              { "key": "x-rapidapi-host", "value": "{{rapidapi_host}}" }
+              {
+                "key": "x-rapidapi-key",
+                "value": "{{rapidapi_key}}"
+              },
+              {
+                "key": "x-rapidapi-host",
+                "value": "{{rapidapi_host}}"
+              }
             ],
             "url": {
               "raw": "{{base_url}}/api/stock/get-chart?region=US&range=1mo&symbol=ZZZZZ&interval=5m",
-              "host": ["{{base_url}}"],
-              "path": ["api", "stock", "get-chart"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "stock",
+                "get-chart"
+              ],
               "query": [
-                { "key": "region", "value": "US" },
-                { "key": "range", "value": "1mo" },
-                { "key": "symbol", "value": "ZZZZZ" },
-                { "key": "interval", "value": "5m" }
+                {
+                  "key": "region",
+                  "value": "US"
+                },
+                {
+                  "key": "range",
+                  "value": "1mo"
+                },
+                {
+                  "key": "symbol",
+                  "value": "ZZZZZ"
+                },
+                {
+                  "key": "interval",
+                  "value": "5m"
+                }
               ]
             }
           },
@@ -195,17 +311,38 @@
           "request": {
             "method": "GET",
             "header": [
-              { "key": "x-rapidapi-key", "value": "{{rapidapi_key}}" },
-              { "key": "x-rapidapi-host", "value": "{{rapidapi_host}}" }
+              {
+                "key": "x-rapidapi-key",
+                "value": "{{rapidapi_key}}"
+              },
+              {
+                "key": "x-rapidapi-host",
+                "value": "{{rapidapi_host}}"
+              }
             ],
             "url": {
               "raw": "{{base_url}}/api/news/list-by-symbol?s=AAPL&region=US&snippetCount=5",
-              "host": ["{{base_url}}"],
-              "path": ["api", "news", "list-by-symbol"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "news",
+                "list-by-symbol"
+              ],
               "query": [
-                { "key": "s", "value": "AAPL" },
-                { "key": "region", "value": "US" },
-                { "key": "snippetCount", "value": "5" }
+                {
+                  "key": "s",
+                  "value": "AAPL"
+                },
+                {
+                  "key": "region",
+                  "value": "US"
+                },
+                {
+                  "key": "snippetCount",
+                  "value": "5"
+                }
               ]
             }
           },
@@ -229,16 +366,34 @@
           "request": {
             "method": "GET",
             "header": [
-              { "key": "x-rapidapi-key", "value": "{{rapidapi_key}}" },
-              { "key": "x-rapidapi-host", "value": "{{rapidapi_host}}" }
+              {
+                "key": "x-rapidapi-key",
+                "value": "{{rapidapi_key}}"
+              },
+              {
+                "key": "x-rapidapi-host",
+                "value": "{{rapidapi_host}}"
+              }
             ],
             "url": {
               "raw": "{{base_url}}/api/news/list-by-symbol?region=US&snippetCount=5",
-              "host": ["{{base_url}}"],
-              "path": ["api", "news", "list-by-symbol"],
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "news",
+                "list-by-symbol"
+              ],
               "query": [
-                { "key": "region", "value": "US" },
-                { "key": "snippetCount", "value": "5" }
+                {
+                  "key": "region",
+                  "value": "US"
+                },
+                {
+                  "key": "snippetCount",
+                  "value": "5"
+                }
               ]
             }
           },
@@ -249,6 +404,149 @@
                 "exec": [
                   "pm.test('Request completes (status documented, not assumed)', () => {",
                   "  pm.expect(pm.response.code).to.be.a('number');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Firebase Firestore (qa_test_objects)",
+      "description": "CRUD chaining test against the app's own real backend (Firestore REST API), isolated in a dedicated qa_test_objects collection that the app itself never reads or writes, so this never touches real watchlist/stock_data. Self-cleaning: request 3 deletes what request 1 creates, request 4 proves it's gone.",
+      "item": [
+        {
+          "name": "1. POST - Create Object",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fields\": {\n    \"name\": {\n      \"stringValue\": \"QA Postman CRUD Test\"\n    },\n    \"createdBy\": {\n      \"stringValue\": \"Postman/Newman CRUD chaining test\"\n    },\n    \"purpose\": {\n      \"stringValue\": \"Isolated test document - safe to create/read/delete, not used by the app\"\n    }\n  }\n}"
+            },
+            "url": {
+              "raw": "{{firestore_base_url}}/qa_test_objects",
+              "host": [
+                "{{firestore_base_url}}"
+              ],
+              "path": [
+                "qa_test_objects"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200', () => pm.response.to.have.status(200));",
+                  "const json = pm.response.json();",
+                  "pm.test('Response has a document name', () => {",
+                  "  pm.expect(json.name).to.be.a('string');",
+                  "});",
+                  "pm.test('Created document has the expected name field', () => {",
+                  "  pm.expect(json.fields.name.stringValue).to.eql('QA Postman CRUD Test');",
+                  "});",
+                  "// Firestore returns the full resource path in 'name' - the doc id is the last segment",
+                  "const segments = json.name.split('/');",
+                  "const createdId = segments[segments.length - 1];",
+                  "pm.collectionVariables.set('firestore_created_id', createdId);",
+                  "console.log('Created Firestore doc ID:', createdId);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "2. GET - Read Created Object",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{firestore_base_url}}/qa_test_objects/{{firestore_created_id}}",
+              "host": [
+                "{{firestore_base_url}}"
+              ],
+              "path": [
+                "qa_test_objects",
+                "{{firestore_created_id}}"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200', () => pm.response.to.have.status(200));",
+                  "const json = pm.response.json();",
+                  "pm.test('Returned document matches created name field', () => {",
+                  "  pm.expect(json.fields.name.stringValue).to.eql('QA Postman CRUD Test');",
+                  "});",
+                  "pm.test('Returned document id matches the created id', () => {",
+                  "  const segments = json.name.split('/');",
+                  "  pm.expect(segments[segments.length - 1]).to.eql(pm.collectionVariables.get('firestore_created_id'));",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "3. DELETE - Cleanup Created Object",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{firestore_base_url}}/qa_test_objects/{{firestore_created_id}}",
+              "host": [
+                "{{firestore_base_url}}"
+              ],
+              "path": [
+                "qa_test_objects",
+                "{{firestore_created_id}}"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "4. GET - Verify Deletion (expect 404)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{firestore_base_url}}/qa_test_objects/{{firestore_created_id}}",
+              "host": [
+                "{{firestore_base_url}}"
+              ],
+              "path": [
+                "qa_test_objects",
+                "{{firestore_created_id}}"
+              ]
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status code is 404 after deletion (document no longer exists)', () => pm.response.to.have.status(404));",
+                  "const json = pm.response.json();",
+                  "pm.test('Error body reports NOT_FOUND', () => {",
+                  "  pm.expect(json.error.status).to.eql('NOT_FOUND');",
                   "});"
                 ]
               }
