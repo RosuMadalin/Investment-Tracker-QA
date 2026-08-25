@@ -27,6 +27,8 @@ investment-tracking-qa/
 │
 ├── api-testing/                # Postman collection: RapidAPI (third-party) + Firestore REST (the app's own backend)
 │
+├── sql-testing/                # SQL skills demo: own hypothetical schema + Chinook, since the app itself has no SQL backend
+│
 └── test-summary/               # final report: totals, pass/fail rate, key findings, release recommendation
 ```
 
@@ -40,6 +42,7 @@ investment-tracking-qa/
 | Bug Reports | ✅ 1 filed (BUG-001) |
 | Regression Testing | ⬜ Pending (after BUG-001 is fixed) |
 | API Testing | ✅ Done — Postman collection (RapidAPI + Firestore CRUD), Environment file, 20/20 assertions passed via Newman CLI |
+| SQL Testing | ✅ Done — hypothetical schema (4 seeded issues, all caught) + Chinook exercise, 10 queries total |
 | Test Summary Report | ✅ Done |
 
 ## Results at a glance
