@@ -1,0 +1,18 @@
+# SQL Test Cases – Database Validation
+
+Reference: `README.md` (why this section exists — the app itself has no SQL backend), `schema.sql`, `seed-data.sql`, `qa-validation-queries.sql`, `chinook-qa-queries.sql`
+
+**Note on "Expected Result" for these cases:** unlike a functional UI test case, a data-validation query's expected result usually isn't "nothing happens" — it's "the query correctly detects the problem it was built to detect" (SQL-TC-01 to 06), or "the query correctly confirms the data is clean" (SQL-TC-07 to 10, against Chinook's real, well-formed data). Same logic as a negative test case like TC-02: PASS means the check did its job, not that nothing was found.
+
+| ID | Title | Type | Priority | Preconditions | Steps | Expected Result |
+|----|-------|------|----------|----------------|-------|------------------|
+| SQL-TC-01 | Detect orphaned watchlist references | Database Validation | High | `schema.sql` + `seed-data.sql` loaded (seeded: `watchlist_items` id 6 → symbol `ZZZZ`, not in `stocks`) | Run the "Orphaned watchlist items" query from `qa-validation-queries.sql` | Query returns exactly 1 row: id 6, symbol `ZZZZ` |
+| SQL-TC-02 | Detect duplicate user emails | Database Validation | Medium | Seeded: user 4 shares user 2's email | Run the "Duplicate user emails" query | Query returns exactly 1 row: `test.user@example.com`, occurrences = 2 |
+| SQL-TC-03 | Detect duplicate watchlist entries for the same user+symbol | Database Validation | High | Seeded: user 1 watches `AAPL` twice (ids 1 and 5) — mirrors TC-02's duplicate-symbol case, checked at the data layer | Run the "Duplicate watchlist entries" query | Query returns exactly 1 row: user_id 1, symbol `AAPL`, occurrences = 2 |
+| SQL-TC-04 | Detect invalid (negative) prices | Database Validation | High | Seeded: `NVDA` has a price of -12.00 in `price_history` | Run the "Invalid (negative) prices" query | Query returns exactly 1 row: `NVDA`, -12.00 |
+| SQL-TC-05 | Detect watchlist items with no matching price data | Database Validation | Medium | Seeded: `GOOGL` (valid stock) has no `price_history` row; `ZZZZ` (orphaned symbol) also has none | Run the "Watchlist items with no matching price data" query | Query returns exactly 2 rows: id 3 (`GOOGL`), id 6 (`ZZZZ`) |
+| SQL-TC-06 | Report watchlist count per user | Database Validation | Low | Standard seed data, 4 users with 0-3 watchlist items each | Run the "Watchlist count per user" query | Query returns 4 rows, one per user, ordered by count descending, matching the actual number of `watchlist_items` rows per `user_id` |
+| SQL-TC-07 | Detect customers with no invoices (Chinook) | Database Validation | Medium | Chinook `Customer`/`Invoice` tables loaded (official, unmodified dataset) | Run the "Customers with no invoices" query from `chinook-qa-queries.sql` | Query returns 0 rows — every customer in Chinook has at least one invoice |
+| SQL-TC-08 | Detect invoice totals that don't match their line items (Chinook) | Database Validation | High | Chinook `Invoice`/`InvoiceLine` tables loaded | Run the "Invoices whose Total doesn't match the sum of their line items" query | Query returns 0 rows — Chinook's invoice totals are internally consistent |
+| SQL-TC-09 | Detect invoice lines referencing a non-existent track (Chinook) | Database Validation | High | Chinook `InvoiceLine`/`Track` tables loaded | Run the "Invoice line items referencing a TrackId that doesn't exist in Track" query | Query returns 0 rows — no orphaned track references |
+| SQL-TC-10 | Detect duplicate customer emails (Chinook) | Database Validation | Low | Chinook `Customer` table loaded | Run the "Duplicate customer emails" query | Query returns 0 rows — no duplicate emails in the dataset |

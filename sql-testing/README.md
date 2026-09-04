@@ -7,6 +7,10 @@ So this section is a deliberate, self-contained SQL skills demonstration, split 
 1. **A hypothetical relational schema**, designed to model what Investment Tracker's data *would* look like if it were relational — `users`, `stocks`, `watchlist_items`, `price_history` — seeded with realistic data plus a handful of deliberately planted data-quality issues, then queried with QA-relevant validation queries.
 2. **A short exercise against [Chinook](https://github.com/lerocha/chinook-database)**, the standard public sample database, to show the same QA query skills applied to a schema someone else designed — closer to a first day on a real QA job than only ever querying your own schema.
 
+This README covers the technical side (schema, seeded issues, real output). For the same work formalized the same way the rest of this project documents testing, see:
+- [`sql-test-cases.md`](sql-test-cases.md) — 10 test cases, same format as `../test-cases/test-cases.md`
+- [`sql-test-execution.md`](sql-test-execution.md) — execution results, same format as `../test-execution/test-execution.md`, including why no bug report was filed
+
 ## Tooling
 
 No `sqlite3` CLI or database server needed. Node 22.5+ ships a built-in `node:sqlite` module (used here behind the `--experimental-sqlite` flag) — same idea as Newman being the runner for the Postman collection: the `.sql` files are the real, tool-agnostic deliverable (open them in any SQLite tool — DB Browser for SQLite, the `sqlite3` CLI, etc.), `run-queries.js` is just what was used here to execute them for real and capture the output below.
