@@ -2,14 +2,14 @@
 
 Manual QA portfolio project built around **Investment Tracker**, a live stock watchlist/charting web app.
 
-- **Application under test (AUT):** https://rosumadalin.github.io/tracking-tradings/#
-- **Source code of the app:** https://github.com/RosuMadalin/tracking-tradings
+- **Application under test (AUT):** https://rosumadalin.github.io/Investment-Tracker/
+- **Source code of the app:** https://github.com/RosuMadalin/Investment-Tracker
 - **Role demonstrated:** Manual/Junior QA — test planning, test case design, test execution, defect reporting, regression testing.
 
 ## Project structure
 
 ```
-investment-tracking-qa/
+investment-tracker-qa/
 │
 ├── README.md
 │
