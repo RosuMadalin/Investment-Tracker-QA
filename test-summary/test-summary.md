@@ -1,7 +1,7 @@
 # Test Summary Report
 
 **Project:** Investment Tracker – QA Testing Project
-**Application under test:** https://rosumadalin.github.io/tracking-tradings/#
+**Application under test:** https://rosumadalin.github.io/Investment-Tracker/
 **Testing period:** August 2026
 **Tester:** Madalin Rosu
 

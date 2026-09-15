@@ -25,7 +25,7 @@ Verify that the core watchlist, charting, and navigation features of Investment 
 Manual black-box testing, executed directly in the browser against the running application. Each test case is logged with steps, expected result, and actual result. Failures are filed as bug reports with severity and priority.
 
 ## Environment
-- Application under test (AUT): https://rosumadalin.github.io/tracking-tradings/#
+- Application under test (AUT): https://rosumadalin.github.io/Investment-Tracker/
 - Browser: Chrome (latest), cross-checked on Edge/Firefox for compatibility cases
 - OS: Windows 11
 - Backend: Firebase Firestore (data persistence), RapidAPI Yahoo Finance (live prices, historical data, news)

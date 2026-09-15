@@ -1,7 +1,7 @@
 # Test Cases – Investment Tracker
 
 Reference: `../test-plan/test-plan.md`
-AUT: https://rosumadalin.github.io/tracking-tradings/#
+AUT: https://rosumadalin.github.io/Investment-Tracker/
 
 | ID | Title | Type | Priority | Preconditions | Steps | Expected Result |
 |----|-------|------|----------|----------------|-------|------------------|

@@ -1,6 +1,6 @@
 # Test Execution – Investment Tracker
 
-Executed against the live app: https://rosumadalin.github.io/tracking-tradings/#
+Executed against the live app: https://rosumadalin.github.io/Investment-Tracker/
 Execution date: 2026-08-19
 Executed with: Chrome (Chromium 129) for TC-01 → TC-14, cross-checked with Firefox 130 for TC-15.
 
