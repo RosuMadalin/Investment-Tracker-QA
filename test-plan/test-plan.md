@@ -18,7 +18,7 @@ Verify that the core watchlist, charting, and navigation features of Investment 
 
 ### Out of scope (for this phase)
 - Performance / load testing
-- Security testing (auth is not implemented in the current build)
+- Security testing (auth is not implemented in the current build). Exception added later: a single client-side check that no secret API key is exposed (TC-16)
 - Test automation
 
 ## Test Approach
