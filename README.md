@@ -61,6 +61,7 @@ Defects found during execution are logged as markdown files in `bug-reports/`, t
 
 - Board: To Do → In Progress → Ready for Test → In Testing → Failed → Passed → Done
 - BUG-001 is tracked as **ITQ-2**, currently in `Failed` — see `screenshots/jira-board.png` and `screenshots/jira-BUG-001.png`
+- BUG-002 is tracked as **ITQ-3**, fixed and retested, currently in `Passed` — see `screenshots/jira-board.png` and `screenshots/jira-BUG-002-01.png` / `jira-BUG-002-02.png`
 
 Repo bug IDs and Jira keys are numbered independently, so each Jira ticket title starts with its repo ID (e.g. "BUG-001: ...") for easy cross-search:
 
