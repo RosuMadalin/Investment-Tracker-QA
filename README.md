@@ -17,7 +17,7 @@ investment-tracker-qa/
 │   └── test-plan.md            # scope, approach, environment, entry/exit criteria
 │
 ├── test-cases/
-│   └── test-cases.md           # 15 designed test cases (functional, negative, UI, regression, compatibility)
+│   └── test-cases.md           # 16 designed test cases (functional, negative, UI, regression, compatibility, security)
 │
 ├── test-execution/             # results of running the test cases against the AUT (PASS/FAIL/BLOCKED)
 │

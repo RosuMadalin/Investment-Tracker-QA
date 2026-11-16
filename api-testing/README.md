@@ -16,7 +16,7 @@ newman run postman-collection.json --env-var "rapidapi_key=<your-key>"
 ```
 Or with the environment file: `newman run postman-collection.json -e postman-environment.json` (after filling in the key there instead). To run just the Firestore folder (no key needed): `newman run postman-collection.json --folder "Firebase Firestore (qa_test_objects)"`.
 
-**Note on the key:** the real key is intentionally *not* committed here — it's a live credential and the file is meant to be public on GitHub. As a side note unrelated to this test scope: the app's own frontend code currently hardcodes this key in plain JS (visible in the deployed site's source), which is a separate finding worth addressing later even though security testing is out of scope for this project.
+**Note on the key:** the real key is intentionally *not* committed here — it's a live credential and the file is meant to be public on GitHub. The app's frontend originally hardcoded this key in plain JS as well; that was logged as [BUG-002](../bug-reports/BUG-002.md) and fixed: the app now calls RapidAPI through a server-side proxy, and the exposed key was rotated.
 
 ## Endpoints covered
 

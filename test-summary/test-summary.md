@@ -36,7 +36,7 @@ Full case-by-case results: `../test-execution/test-execution.md`
 - API-level testing (`../api-testing/`) confirmed the RapidAPI dependency behaves as expected (with one documented quirk on missing params), and a CRUD test against the app's own Firestore backend revealed the database has **no authentication at all** — a real risk, documented as an observation since security testing is out of scope for this phase.
 
 ## Recommendation
-**BUG-002** is fixed and retested — no further action needed there beyond the residual risk already noted in the bug report (old key values remain in git history; not rotated). **BUG-001** is still open and should be fixed before the range selector is presented to real users, since it is a visible control that currently does nothing — it does not affect the core watchlist/chart/news functionality, which is otherwise stable.
+**BUG-002** is fixed and retested — and the exposed key was rotated on 2026-10-03 (the old key now returns `403 Forbidden`), so no further action is needed there. **BUG-001** is still open and should be fixed before the range selector is presented to real users, since it is a visible control that currently does nothing — it does not affect the core watchlist/chart/news functionality, which is otherwise stable.
 
 ## Next Steps
 - Fix BUG-001, retest TC-09, run a regression pass on the directly related cases (TC-08, TC-09)
